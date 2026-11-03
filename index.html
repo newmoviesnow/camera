@@ -13,12 +13,31 @@ header{height:76px;border-bottom:1px solid #ffffff12;display:flex;align-items:ce
 .status{color:var(--muted);font-size:12px;display:flex;gap:8px;align-items:center}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
 main{max-width:1260px;margin:0 auto;padding:38px 22px 60px}.intro{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:25px}.eyebrow{color:var(--accent);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.intro h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(30px,4.2vw,46px);font-weight:700;letter-spacing:-1.1px;line-height:1.08;margin:8px 0;color:#073f68}.intro p{color:var(--muted);margin:0;max-width:580px}.tag{border:1px solid var(--line);padding:8px 12px;border-radius:30px;color:#cbd0dc;font-size:12px;white-space:nowrap}
 .layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(290px,.8fr);gap:20px;align-items:start}.panel{background:linear-gradient(160deg,#ffffff,#f6fbfe);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 16px 42px #07547d12}.panel-head{display:flex;align-items:center;justify-content:space-between;padding:16px 19px;border-bottom:1px solid var(--line)}.panel-head strong{font-family:Georgia,'Times New Roman',serif;font-size:16px;letter-spacing:.2px;color:#07547d}.panel-head span{font-size:11px;color:var(--muted)}
-.stage{position:relative;min-height:390px;aspect-ratio:4/3;background:radial-gradient(circle at 50% 35%,#f7fcff,#dcebf3 75%);display:grid;place-items:center;overflow:hidden}.stage video,.stage canvas{width:100%;height:100%;object-fit:contain;display:none}.stage video.show,.stage canvas.show{display:block}.placeholder{text-align:center;padding:30px;color:var(--muted)}.placeholder .camera-icon{width:62px;height:62px;border:1px solid #ffffff25;border-radius:20px;display:grid;place-items:center;margin:0 auto 16px;color:var(--accent);font-size:28px;background:#ffffff08}.placeholder h3{color:var(--text);margin:0 0 6px;font-size:17px}.placeholder p{font-size:13px;max-width:290px;margin:0 auto 18px}
+.stage{position:relative;min-height:390px;aspect-ratio:4/3;background:radial-gradient(circle at 50% 35%,#f7fcff,#dcebf3 75%);display:grid;place-items:center;overflow:hidden}.stage video,.stage canvas{width:100%;height:100%;object-fit:contain;display:none}.stage video.selfie-preview{transform:scaleX(-1)}.stage video.show,.stage canvas.show{display:block}.placeholder{text-align:center;padding:30px;color:var(--muted)}.placeholder .camera-icon{width:62px;height:62px;border:1px solid #ffffff25;border-radius:20px;display:grid;place-items:center;margin:0 auto 16px;color:var(--accent);font-size:28px;background:#ffffff08}.placeholder h3{color:var(--text);margin:0 0 6px;font-size:17px}.placeholder p{font-size:13px;max-width:290px;margin:0 auto 18px}
 .actions{display:flex;flex-wrap:wrap;gap:10px;padding:16px 18px;border-top:1px solid var(--line);background:#14161d}.btn{border:1px solid var(--line);background:#e7f1f7;color:var(--text);border-radius:12px;padding:11px 16px;font-weight:800;font-size:13px;letter-spacing:.25px;cursor:pointer;transition:.18s;box-shadow:0 3px 10px #07547d0c}.btn:hover{transform:translateY(-1px);border-color:#687080}.btn.primary{background:var(--accent);color:#17200e;border-color:var(--accent)}.btn.primary:hover{background:var(--accent2)}.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}.spacer{flex:1}
 .side{display:grid;gap:16px}.section{padding:17px 18px}.section h3{margin:0 0 4px;font-size:14px}.section .hint{color:var(--muted);font-size:11px;margin:0 0 14px}.presets{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.preset{border:1px solid var(--line);border-radius:12px;padding:10px 6px;background:#f1f7fa;color:#24465c;cursor:pointer;text-align:center;font-size:11px}.preset b{display:block;font-size:18px;margin-bottom:4px}.preset.active{border-color:var(--accent);background:#008fd312;color:#007ebc}
 .control{margin:15px 0}.control label{display:flex;justify-content:space-between;color:#dfe2ea;font-size:12px;margin-bottom:8px}.control output{color:var(--accent);font-variant-numeric:tabular-nums}input[type=range]{width:100%;accent-color:var(--accent);cursor:pointer}
 .compare{display:flex;gap:8px}.compare button{flex:1}.note{font-size:11px;color:var(--muted);line-height:1.5;padding:0 18px 17px}.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#dff6f4;color:#075e65;padding:10px 16px;border-radius:30px;font-size:12px;font-weight:800;opacity:0;pointer-events:none;transition:.2s;z-index:10}.toast.show{opacity:1}
-@media(max-width:850px){.layout{grid-template-columns:1fr}.intro{align-items:start;flex-direction:column}.tag{display:none}.stage{min-height:260px;aspect-ratio:4/3}}@media(max-width:480px){main{padding:25px 13px 40px}.stage{min-height:230px}.actions{padding:12px}.btn{padding:10px 12px}.presets{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:850px){
+      header{height:auto;min-height:66px;padding:10px 16px}
+      .layout{grid-template-columns:1fr;gap:14px}
+      .intro{align-items:start;flex-direction:column;margin-bottom:16px}
+      .tag{display:none}main{padding:24px 16px 40px}
+      .stage{min-height:0;aspect-ratio:3/4}
+      .side{grid-template-columns:1fr}
+    }
+    @media(max-width:520px){
+      header{padding:9px 12px}.brand-logo{width:min(210px,58vw);max-height:48px}
+      .brand-caption{font-size:10px;letter-spacing:1px}.brand-caption small{font-size:8px}
+      .status{font-size:10px;gap:5px}
+      main{padding:18px 10px 28px}
+      .intro h1{font-size:29px}.intro p{font-size:13px}
+      .panel{border-radius:16px}.panel-head{padding:13px 14px}
+      .stage{aspect-ratio:3/4;min-height:0;max-height:72vh}
+      .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px}
+      .actions .spacer{display:none}.actions .btn{width:100%;min-height:44px;padding:10px 7px;font-size:12px}
+      .section{padding:14px}.note{padding:0 14px 14px}
+    }
 </style>
 </head>
 <body>
@@ -78,6 +97,7 @@ async function startCamera(){
    video:{facingMode:facing,width:{ideal:1920},height:{ideal:1440}},audio:false
   });
   video.srcObject=stream;await video.play();
+  video.classList.toggle('selfie-preview',facing==='user');
   video.classList.add('show');canvas.classList.remove('show');
   placeholder.style.display='none';
   $('captureBtn').disabled=false;$('switchBtn').disabled=false;
@@ -98,29 +118,24 @@ function drawRotechFrame(){
  ctx.lineWidth=2.2*s;ctx.strokeStyle='#00b6ad';
  ctx.beginPath();ctx.roundRect(inset+10*s,inset+10*s,w-2*(inset+10*s),h-2*(inset+10*s),radius*.78);ctx.stroke();
 
- // Branded header panel with the actual uploaded Rotech logo.
- const headerY=inset+3*s, headerH=h*.19;
- const headGrad=ctx.createLinearGradient(0,headerY,0,headerY+headerH);
- headGrad.addColorStop(0,'rgba(255,255,255,.98)');
- headGrad.addColorStop(1,'rgba(239,250,255,.94)');
- ctx.fillStyle=headGrad;
- ctx.fillRect(inset+3*s,headerY,w-2*(inset+3*s),headerH);
-
- const logoW=Math.min(w*.57,Math.max(180*s,w*.55));
- const logoH=logoW*(rotechLogo.naturalHeight/rotechLogo.naturalWidth);
+ // Small official Rotech logo badge in the top-right corner.
+ const logoW=Math.min(w*.24,Math.max(82*s,w*.22));
+ const logoH=rotechLogo.naturalWidth ? logoW*(rotechLogo.naturalHeight/rotechLogo.naturalWidth) : logoW*.32;
+ const badgePad=7*s, badgeX=w-inset-logoW-badgePad*2-8*s, badgeY=inset+12*s;
+ ctx.save();
+ ctx.shadowColor='rgba(0,45,75,.22)';ctx.shadowBlur=10*s;ctx.shadowOffsetY=3*s;
+ ctx.fillStyle='rgba(255,255,255,.96)';
+ ctx.beginPath();ctx.roundRect(badgeX,badgeY,logoW+badgePad*2,logoH+badgePad*2,9*s);ctx.fill();
+ ctx.restore();
  if(rotechLogo.complete && rotechLogo.naturalWidth){
-  ctx.drawImage(rotechLogo,(w-logoW)/2,headerY+(headerH-logoH)/2,logoW,logoH);
+  ctx.drawImage(rotechLogo,badgeX+badgePad,badgeY+badgePad,logoW,logoH);
  }else{
-  ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#008fd3';
-  ctx.font=`900 ${Math.max(20,Math.round(h*.052))}px 'Trebuchet MS',Arial,sans-serif`;
-  ctx.fillText('ROTECH HEALTHCARE',w/2,headerY+headerH/2);
+  ctx.fillStyle='#008fd3';ctx.font=`800 ${Math.max(10,Math.round(h*.022))}px Arial,sans-serif`;
+  ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('ROTECH',badgeX+(logoW+badgePad*2)/2,badgeY+(logoH+badgePad*2)/2);
  }
 
- // Fine teal separator with small centered diamond.
- const sepY=headerY+headerH;
- ctx.fillStyle='#00aaa9';ctx.fillRect(w*.13,sepY,w*.74,2.5*s);
- ctx.save();ctx.translate(w/2,sepY+1.2*s);ctx.rotate(Math.PI/4);
- ctx.fillStyle='#00aaa9';ctx.fillRect(-4*s,-4*s,8*s,8*s);ctx.restore();
+ // Subtle teal accent line near the top edge.
+ ctx.fillStyle='#00b6ad';ctx.fillRect(inset+14*s,inset+17*s,Math.max(22*s,w*.13),2.5*s);
 
  // Family ribbon with premium blue-to-teal treatment.
  const ry=h*.735,rh=h*.087;
